@@ -9,15 +9,18 @@ const Hero = () => {
   const totalVideos = 4;
   const nextVideoRef = useRef();
 
-  const handleMiniVideoClick = () => {
-    setHasClicked(true);
-    
-    setCurrentIndex((prevIndex) => prevIndex + 1);
-  }
-
   const handleVideoLoad = () => {
     setLoadedVideos((prev) => prev + 1);   
   }
+
+  const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
+
+  const handleMiniVideoClick = () => {
+    setHasClicked(true);
+    setCurrentIndex(upcomingVideoIndex);
+  }
+ 
+
 
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`
 
