@@ -30,7 +30,7 @@ const Hero = () => {
     if(hasClicked) {
       gsap.set('#next-video', {visibility: 'visible'});
 
-      gsap.to('#next-vide', {
+      gsap.to('#next-video', {
         transformOrigin: 'center center',
         scale: 1,
         width: '100%',
