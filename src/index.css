@@ -177,7 +177,7 @@ body {
     display: inline-block;
     height: var(--uib-size);
     width: var(--uib-size);
-    animation: spoin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+    animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
 }
 
 .three-body__dot {
@@ -186,7 +186,7 @@ body {
     width: 30%;
 }
 
-three-body__dot:after {
+.three-body__dot:after {
     content: "";
     position: absolute;
     height: 0%;
@@ -221,7 +221,7 @@ three-body__dot:after {
     bottom: 0;
     left: 0;
     animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15)
-    ease-in-out;
+     ease-in-out;
 }
 
 .three-body__dot:nth-child(3) {

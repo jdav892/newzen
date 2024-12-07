@@ -53,7 +53,7 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.set('#video-frame', {
-      clipPath: 'polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%);',
+      clipPath: 'polygon(14% 0%, 72% 0%, 88% 90%, 0% 95%)',
       borderRadius: '0% 0% 40% 10%'
     })
 
@@ -72,6 +72,15 @@ const Hero = () => {
 
   return (
     <div className="relative h-dvh w-screen overflow-x-hidden">
+      {isLoading && (
+        <div>
+          <div className="three-body">
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
+            <div className="three-body__dot"></div>
+          </div>
+        </div>
+      )}
         <div id="video-frame" className="relative z-10 h-dvh w-screen overflow-hidden
         rounded-lg bg-blue-75">
             <div>
