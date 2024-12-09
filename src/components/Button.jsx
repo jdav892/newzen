@@ -1,4 +1,4 @@
-import React from 'react'
+
 
 const Button = ({ title, id, rightIcon, leftIcon, containerClass }) => {
   return (
@@ -11,6 +11,7 @@ const Button = ({ title, id, rightIcon, leftIcon, containerClass }) => {
                 {title}
             </div>
         </span>
+        {rightIcon}
     </button>
   )
 }
