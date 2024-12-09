@@ -8,7 +8,11 @@ const BentoCard = ({ src, title, description, isComingSoon}) => {
                 autoPlay
                 className="absolute left-0 top-0 size-full object-cover object-center"
             />
-            {title}
+            <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
+                <div>
+                    <h1 className="bento-title special-font">{title}</h1>
+                </div>
+            </div>
         </div>
     )
 }
@@ -26,7 +30,8 @@ const Features = () => {
                     where a vibrant array of products converge into an interconnected
                     overlay experience on your world.
                 </p>
-                <div className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-65vh">
+            </div>
+                <div className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
                     <BentoCard 
                         src="videos/feature-1.mp4"
                         title={<>radia<b>n</b>t</>}
@@ -34,7 +39,6 @@ const Features = () => {
                         isComingSoon={true}
                     />
                 </div>
-            </div>
         </div>
     </section>
   )

@@ -63,7 +63,7 @@ body {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
-    .special-font b {
+    .special-font {
         font-family: "Zentry";
         font-feature-settings: "ss01" on;
     }
@@ -99,7 +99,7 @@ body {
         @apply relative col-span-1 row-span-1 overflow-hidden rounded-md transition-transform duration-300 ease-out;
     }
 
-    .bento_title {
+    .bento-title {
         @apply uppercase md:text-6xl text-4xl font-black font-zentry;
     }
 
