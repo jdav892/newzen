@@ -1,4 +1,17 @@
-import React from 'react'
+const BentoCard = ({ src, title, description, isComingSoon}) => {
+    return (
+        <div className="relative size-full">
+            <video
+                src={src}
+                loop
+                muted
+                autoPlay
+                className="absolute left-0 top-0 size-full object-cover object-center"
+            />
+            {title}
+        </div>
+    )
+}
 
 const Features = () => {
   return (
@@ -13,8 +26,13 @@ const Features = () => {
                     where a vibrant array of products converge into an interconnected
                     overlay experience on your world.
                 </p>
-                <div>
-                    
+                <div className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-65vh">
+                    <BentoCard 
+                        src="videos/feature-1.mp4"
+                        title={<>radia<b>n</b>t</>}
+                        description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
+                        isComingSoon={true}
+                    />
                 </div>
             </div>
         </div>
