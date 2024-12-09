@@ -11,6 +11,11 @@ const BentoCard = ({ src, title, description, isComingSoon}) => {
             <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
                 <div>
                     <h1 className="bento-title special-font">{title}</h1>
+                    {description && (
+                        <p className="mt-3 max-w-64 text-xs md:text-base">
+                            {description}
+                        </p>
+                    )}
                 </div>
             </div>
         </div>
@@ -38,6 +43,22 @@ const Features = () => {
                         description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
                         isComingSoon={true}
                     />
+                </div>
+                <div className="grid h-[135vh] grid-cols-2 grid-rows-3 gap-7">
+                    <div className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
+                        <BentoCard 
+                            src="videos/feature-2.mp4"
+                            title={<>Zig<b>m</b>a</>}
+                            description="An anime and gaming inspired NFT collection - the IP primed for expansion." 
+                        />
+                    </div>
+                    <div className="bento-tilt_1 row-span-1 ms:32 md:col-span-1 md:ms-0">
+                        <BentoCard
+                            src="videos/feature-3.mp4"
+                            title={<>N<b>e</b>xus</>}
+                            description="A gamified social hub, adding a new dimension of pay to social interaction for Web3 communities."
+                        />
+                    </div>
                 </div>
         </div>
     </section>
