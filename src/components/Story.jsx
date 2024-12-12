@@ -1,12 +1,22 @@
 import AnimatedTitle from "./AnimatedTitle";
 import React, { useRef } from "react"
 import gsap from 'gsap'
+import RoundedCorners from "./RoundedCorners";
 
 const Story = () => {
   const frameRef = useRef('null');
 
   const handleMouseLeave = () => {
+    const element = frameRef.current;
 
+
+
+    gsap.to(element, {
+      duration: 0.3,
+      rotateX:0, 
+      rotateY: 0,
+      ease: 'power1.inOut'
+    })
   }
   
     const handleMouseMove = (i) => {
@@ -59,8 +69,10 @@ const Story = () => {
                 />
               </div>
             </div>
+            <RoundedCorners />
           </div>
         </div>
+  
       </div>
     </section>
   )
